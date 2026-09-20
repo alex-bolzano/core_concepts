@@ -9,10 +9,12 @@ package com.alexnguef;
 public class Vehicle {
 
     public void makeVehicle(){
-        SonySpeaker speaker = new SonySpeaker();
+        //SonySpeaker speaker = new SonySpeaker();
+        Speaker speaker = new SpeakerFactory().getSpeaker();
         System.out.println(speaker.makeSound());
 
-        MichelinWheel wheel = new MichelinWheel();
+        //MichelinWheel wheel = new MichelinWheel();
+        Wheel wheel = new WheelFactory().getWheel();
         System.out.println(wheel.moveVehicle());
     }
     static void main() {
